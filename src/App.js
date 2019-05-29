@@ -3,6 +3,7 @@ import './App.css';
 import { Switch, Route, withRouter } from 'react-router-dom'
 import Landing from './Landing/Landing'
 import Login from './Auth/Login/Login'
+import Register from './Auth/Login/Register'
 
 class App extends Component {
 
@@ -46,6 +47,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={() => <Landing />} />
           <Route exact path="/login" component={() => <Login doLoginUser={this.doLoginUser}/>} />
+          <Route exact path="/register" component={() => <Register />} />
         </Switch>
       </div>
     )
